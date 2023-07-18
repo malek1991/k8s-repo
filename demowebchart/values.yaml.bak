@@ -5,12 +5,13 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: webdevdemo.azurecr.io/demoapp
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: 0.7
 
-imagePullSecrets: []
+imagePullSecrets:
+  - name: regcreddemo
 nameOverride: ""
 fullnameOverride: ""
 
